@@ -25,13 +25,9 @@ if (seconds<10){
 	'0' + seconds
 }
 
-if (hours.length <2){
 
-	hours='0' + hours;
-}
-
-
+document.body.style.backgroundColor="#"+ hours + minutes + seconds
 
 }
-
+setInterval(myClock, 1000)
 myClock()
