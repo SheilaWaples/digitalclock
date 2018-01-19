@@ -2,9 +2,16 @@ function myClock(){
 	var time= new Date();
 	var hours= time.getHours();
 	var minutes= time.getMinutes();
-	var seconds= time.getSeonds();
+	var seconds= time.getSeconds();
 
+	var hour= document.getElementById('hours');
+	hour.innerHTML = hours
 
+	var minute = document.getElementById('minutes');
+	minute.innerHTML= minutes
+
+	var second= document.getElementById('seconds');
+	second.innerHTML=seconds
 
 if (hours<10){
 	'0' + hours
@@ -23,4 +30,8 @@ if (hours.length <2){
 	hours='0' + hours;
 }
 
+
+
 }
+
+myClock()
