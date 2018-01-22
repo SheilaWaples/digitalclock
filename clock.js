@@ -13,6 +13,8 @@ function myClock(){
 	var second= document.getElementById('seconds');
 	second.innerHTML=seconds
 
+
+
 if (hours<10){
 	'0' + hours
 }
@@ -22,7 +24,7 @@ if (minutes<10){
 }
 
 if (seconds<10){
-	'0' + seconds
+	('0' + '10')
 }
 
 
@@ -31,3 +33,4 @@ document.body.style.backgroundColor="#"+ hours + minutes + seconds
 }
 setInterval(myClock, 1000)
 myClock()
+
