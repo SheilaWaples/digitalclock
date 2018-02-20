@@ -4,6 +4,13 @@ function myClock(){
 	var minutes= time.getMinutes();
 	var seconds= time.getSeconds();
 
+	// if(h <= 9) h = '0'+h;
+	// if(m <= 9) m = '0'+m;
+	// if(s <= 9) s = '0'+s;
+
+	// 	color = "#"+h+m+s;
+	
+
 	var hour= document.getElementById('hours');
 	hour.innerHTML = hours
 
@@ -13,24 +20,17 @@ function myClock(){
 	var second= document.getElementById('seconds');
 	second.innerHTML=seconds
 
+	if(hours <= 9) hour.innerHTML = '0'+hours;
+	if(minutes <= 9) minute.innerHTML = '0'+minutes;
+	if(seconds <= 9) second.innerHTML = '0'+seconds;
 
-
-if (hours<10){
-	'0' + hours
-}
-
-if (minutes<10){
-	'0' + minutes
-}
-
-if (seconds<10){
-	('0' + '10')
-}
-
-
-document.body.style.backgroundColor="#"+ hours + minutes + seconds
+		color = "#"+hour+minute+second;
+	
 
 }
-setInterval(myClock, 1000)
-myClock()
+
+
+ 
+ setInterval(myClock, 1000);
+myClock();
 
